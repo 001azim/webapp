@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.react-tel-input .flag-dropdown {
+    left: 10px; /* Adjust this to move the flag slightly */
+}
+
+.react-tel-input input {
+    padding-left: 60px !important; /* Override the padding to ensure enough space */
+}
