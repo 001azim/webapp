@@ -28,9 +28,9 @@ const Form = () => {
             .required("Email is required")
             .email("Must be a valid email"),
         phone: Yup.string().required("Phone number is required"),
-        specialize: Yup.string()
-            .matches(/^[A-Za-z\s]+$/, "Only alphabets and spaces are allowed")
-            .required("Company's specialization is required"),
+        // specialize: Yup.string()
+        //     .matches(/^[A-Za-z\s]+$/, "Only alphabets and spaces are allowed")
+        //     .required("Company's specialization is required"),
     });
 
     const handleSubmit = async (e) => {
@@ -48,7 +48,7 @@ const Form = () => {
                 firstname: details.firstname,
                 lastname: details.lastname,
                 phone: formattedPhoneNumber, // Save the formatted phone number
-                specialization: details.specialize
+                // specialization: details.specialize
             });
 
             setErrors({});
@@ -149,7 +149,7 @@ const Form = () => {
                             />
                         </div>
 
-                        <div className="mb-4">
+                        {/* <div className="mb-4">
                             <p className='text-red-500'>{errors.specialize && <p>{errors.specialize}</p>}</p>
                             <label htmlFor="specialize" className="block text-sm font-semibold text-gray-700 mb-1 text-left">
                                 What does your company specialize in <span className='text-red-500'>*</span>
@@ -161,7 +161,7 @@ const Form = () => {
                                 className="w-full p-2 border border-gray-300 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 onChange={(e) => setDetails({ ...details, specialize: e.target.value })}
                             />
-                        </div>
+                        </div> */}
 
                         <p className="text-sm text-left text-gray-600 mb-6">
                             We're committed to your privacy. HubSpot uses the information you provide to us to contact you about our relevant content, products, and services. You may unsubscribe from these communications at any time. For more information, check out our{' '}
